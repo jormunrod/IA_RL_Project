@@ -1,0 +1,266 @@
+\documentclass[conference,a4paper]{IEEEtran}
+
+% Escritura mejorada de fórmulas matemáticas
+\usepackage{amsmath}
+
+% Inserción de gráficos
+\usepackage{graphicx}
+
+% Escritura de pseudocódigo
+\usepackage[kw]{pseudo}
+
+% Escritura mejorada de tablas
+\usepackage{booktabs}
+
+% Escritura mejorada de citas bibliográficas
+\usepackage{cite}
+
+
+% Macros traducidas
+\def\contentsname{Índice general}
+\def\listfigurename{Índice de figuras}
+\def\listtablename{Índice de tablas}
+\def\refname{Referencias}
+\def\indexname{Índice alfabético}
+\def\figurename{Fig.}
+\def\tablename{TABLA}
+\def\partname{Parte}
+\def\appendixname{Apéndice}
+\def\abstractname{Resumen}
+% IEEE specific names
+\def\IEEEkeywordsname{Palabras clave}
+\def\IEEEproofname{Demostración}
+
+
+\begin{document}
+
+\title{Título del trabajo (elegir uno original)}
+
+\author{
+  \IEEEauthorblockN{Nombre y apellidos alumno 1}
+  \IEEEauthorblockA{
+    \textit{Dpto. Ciencias de la Computación e Inteligencia Artificial}\\
+    \textit{Universidad de Sevilla}\\
+    Sevilla, España\\
+    Correos electrónicos UVUS y de contacto (si distinto)}
+  
+  \and
+  
+  \IEEEauthorblockN{Nombre y apellidos alumno 2}
+  \IEEEauthorblockA{
+    \textit{Dpto. Ciencias de la Computación e Inteligencia Artificial}\\
+    \textit{Universidad de Sevilla}\\
+    Sevilla, España\\
+    Correos electrónicos UVUS y de contacto (si distinto)}
+}
+
+\maketitle
+
+
+% Resumen
+\begin{abstract}
+  Escribir aquí dos párrafos indicando el objetivo principal del trabajo, y un
+  resumen de las conclusiones obtenidas. Cabe mencionar que este documento se
+  ha confeccionado siguiendo el formato de conferencias de IEEE (ver la guía
+  para autores para más información, existen plantillas para Word y \LaTeX).
+  Este documento se debe emplear como guía, se pueden añadir nuevas secciones
+  según sea necesario. Es importante dotarlo de un número razonable de
+  referencias bibliográficas.
+\end{abstract}
+
+
+% Palabras claves
+\begin{IEEEkeywords}
+  Inteligencia Artificial, otras palabras clave…
+\end{IEEEkeywords}
+
+
+\section{Introducción}
+
+En esta sección se dedican varios párrafos para dar el contexto en el que se
+desarrolla el trabajo presentado. Normalmente se va desde lo más general a lo
+más preciso, para englobar el trabajo dentro de un ámbito concreto. Hay que
+recordar que se debe referenciar la información que se consiga de fuentes
+bibliográficas (artículos, libros, capítulos de libros, páginas web, apuntes,
+etc.). Para ello se añade el ítem correspondiente en el apartado de
+referencias, dotándolo de un número, y se añade la referencia al final de la
+frase o párrafo correspondiente~\cite{b1}. Si se realiza en Microsoft Word o
+LibreOffice, se puede hacer uso de \emph{referencias cruzadas} para actualizar
+la numeración de las referencias de forma automática en todo el documento.
+
+Después vienen un par de párrafos para dar un poco más de detalle sobre el
+trabajo realizado. Hay que indicar la problemática o el objetivo que se marca,
+y cómo se ha enfocado la solución propuesta en este trabajo. Finalmente, el
+último párrafo se dedica a comentar la estructura del documento por secciones,
+como el que sigue.
+
+
+\section{Preliminares}
+
+En esta sección se hace una breve introducción de las técnicas empleadas y
+también trabajos relacionados, si los hay.
+
+
+\subsection{Métodos empleados}
+
+Describir aquí los métodos y técnicas empleadas (búsqueda en espacio de
+estados, algoritmos genéticos, redes bayesianas, técnicas de clasificación,
+redes neuronales, etc.). Si es necesario, separarlos en distintas subsecciones
+dentro de Antecedentes.
+
+Se pueden usar listas por puntos como sigue:
+\begin{itemize}
+\item Un punto: esto es un ejemplo de una lista.
+\item Otro punto.
+\end{itemize}
+
+Por último, se debe hacer un uso correcto de las referencias bibliográficas,
+para que el lector pueda acceder a más información~\cite{b2}. Todas las
+referencias al final del documento deben ser citadas al menos una vez.
+
+
+\subsection{Trabajo Relacionado}
+
+Se puede realizar un recorrido en la literatura sobre trabajos anteriores que
+estén relacionados y que sea por tanto interesante comentar aquí. Por supuesto,
+añadir las referencias bibliográficas correspondientes.
+
+
+\section{Metodología}
+
+Esta sección se dedica a la descripción del método implementado en el trabajo.
+Esta parte es la correspondiente a lo realmente desarrollado en el trabajo, y
+se puede emplear pseudocódigo (nunca código), esquemas, tablas, etc.
+
+\begin{figure}
+  \centering
+  \includegraphics{ejemplo}
+  \caption{Ejemplo de un pie de figura. Imagen con derechos Creative Commons}
+  \label{fig:ejemplo}
+\end{figure}
+
+A continuación, un ejemplo de uso de listas numeradas:
+\begin{enumerate}
+\item\label{item:dos-alumnos} \textit{Trabajos con dos alumnos:} poner nombre y
+  apellidos completos de cada uno, y correos electrónicos de contacto (a ser
+  posible de la Universidad de Sevilla). El orden de los alumnos se fijará por
+  orden alfabético según los apellidos.
+\item \textit{Trabajo con un autor:} cambiar la cabecera de la siguiente manera
+  \begin{enumerate}
+  \item \textit{Una sola columna:} solo se debe especificar un alumno.
+  \item \textit{Información a añadir:} la misma que la especificada en el
+    punto~\ref{item:dos-alumnos}.
+  \end{enumerate}
+\end{enumerate}
+
+Las figuras se deben mencionar en el texto, como la
+\figurename~\ref{fig:ejemplo}. También se pueden añadir ecuaciones, como la
+ecuación~\eqref{eq:ejemplo}.
+
+\begin{equation}
+  \label{eq:ejemplo}
+  a + b = \gamma
+\end{equation}
+
+Un ejemplo de pseudocódigo se puede observar en la
+\figurename~\ref{pcd:mergesort}.
+
+\begin{figure}
+  \begin{pseudo}*
+    \hd{\fn{mergesort}}(V) \\*
+    \multicolumn{2}{l}{\textbf{Entrada}: un vector \( V \)} \\*
+    \multicolumn{2}{l}{\textbf{Salida}: un vector con los elementos de \( V \)
+      en orden} \\
+    si \( V \) \textnormal{es unitario} entonces \\+
+    devolver \( V \) \\-
+    si no entonces \\+
+    \( V_{1} \leftarrow \textnormal{primera mitad de } V\) \\
+    \( V_{2} \leftarrow \textnormal{segunda mitad de } V\) \\
+    \( V_{1} \leftarrow \pr{mergesort}(V_{1}) \) \\
+    \( V_{2} \leftarrow \pr{mergesort}(V_{2}) \) \\
+    devolver \fn{mezcla}(V_{1}, V_{2})
+  \end{pseudo}
+  
+  \begin{pseudo}*
+    \hd{\fn{mezcla}}(V_{1}, V_{2}) \\*
+    \multicolumn{2}{l}{%
+      \textbf{Entrada}: dos vectores \( V_{1} \) y \( V_{2} \) ordenados
+    } \\*
+    \multicolumn{2}{l}{%
+      \textbf{Salida}: un vector con los elementos de \( V_{1} \) y \( V_{2} \)
+      en orden
+    } \\
+    si \( V_{1} \) \textnormal{no tiene elementos} entonces \\+
+    devolver \( V_{2} \) \\-
+    si no si \( V_{2} \) \textnormal{no tiene elementos} entonces \\+
+    devolver \( V_{1} \) \\-
+    si no entonces \\+
+    \( x_{1} \leftarrow \textnormal{primer elemento de } V_{1} \) \\
+    \( x_{2} \leftarrow \textnormal{primer elemento de } V_{2} \) \\
+    si \( x_{1} \leq x_{2} \) entonces \\+
+    \( x \leftarrow x_{1} \) \\
+    \textnormal{quitar el primer elemento de} \( V_{1} \) \\-
+    si no entonces \\+
+    \( x \leftarrow x_{2} \) \\
+    \textnormal{quitar el primer elemento de} \( V_{2} \) \\-
+    \( V \leftarrow \fn{mezcla}(V_{1}, V_{2}) \) \\
+    \textnormal{añadir} \( x \)
+    \textnormal{como primer elemento de} \( V \) \\
+    devolver \( V \)
+  \end{pseudo}
+  \caption{Algoritmo de ordenación \texttt{MergeSort}}
+  \label{pcd:mergesort}
+\end{figure}
+
+
+\section{Resultados}
+
+En esta sección se detallarán tanto los experimentos realizados como los
+resultados conseguidos:
+\begin{itemize}
+\item Los experimentos realizados, indicando razonadamente la configuración
+  empleada, qué se quiere determinar, y como se ha medido.
+\item Los resultados obtenidos en cada experimento, explicando en cada caso lo
+  que se ha conseguido.
+\item Análisis de los resultados, haciendo comparativas y obteniendo
+  conclusiones.
+\end{itemize}
+
+Se pueden hacer uso de tablas, como el ejemplo de la tabla~\ref{tab:ejemplo}.
+
+\begin{table}
+  \caption{Ejemplo de tabla}
+  \label{tab:ejemplo}
+  \centering
+  \begin{tabular}{ccc}
+    \toprule
+    A & B & C \\
+    \midrule
+    1 & 2 & 3 \\
+    4 & 5 & 6 \\
+    \bottomrule
+  \end{tabular}
+\end{table}
+
+
+\section{Conclusiones}
+
+Finalmente, se dedica la última sección para indicar las conclusiones obtenidas
+del trabajo. Se puede dedicar un párrafo para realizar un resumen sucinto del
+trabajo, con los experimentos y resultados. Seguidamente, uno o dos párrafos
+con conclusiones. Se suele dedicar un párrafo final con ideas de mejora y
+trabajo futuro.
+
+
+\begin{thebibliography}{00}
+\bibitem{b1} G. Eason, B. Noble, and I. N. Sneddon, ``On certain integrals of Lipschitz-Hankel type involving products of Bessel functions,'' Phil. Trans. Roy. Soc. London, vol. A247, pp. 529--551, April 1955.
+\bibitem{b2} J. Clerk Maxwell, A Treatise on Electricity and Magnetism, 3rd ed., vol. 2. Oxford: Clarendon, 1892, pp.68--73.
+\bibitem{b3} I. S. Jacobs and C. P. Bean, ``Fine particles, thin films and exchange anisotropy,'' in Magnetism, vol. III, G. T. Rado and H. Suhl, Eds. New York: Academic, 1963, pp. 271--350.
+\bibitem{b4} K. Elissa, ``Title of paper if known,'' unpublished.
+\bibitem{b5} R. Nicole, ``Title of paper with only first word capitalized,'' J. Name Stand. Abbrev., in press.
+\bibitem{b6} Y. Yorozu, M. Hirano, K. Oka, and Y. Tagawa, ``Electron spectroscopy studies on magneto-optical media and plastic substrate interface,'' IEEE Transl. J. Magn. Japan, vol. 2, pp. 740--741, August 1987 [Digests 9th Annual Conf. Magnetics Japan, p. 301, 1982].
+\bibitem{b7} M. Young, The Technical Writer's Handbook. Mill Valley, CA: University Science, 1989.
+\end{thebibliography}
+
+
+\end{document}
